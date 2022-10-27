@@ -205,7 +205,7 @@ h3 {
     height: auto;
 }
 
-.valentin__title {
+.valentin__title{
     grid-column: 1 / 4;
 }
 
@@ -213,6 +213,20 @@ h3 {
     background-color: var(--white);
     padding: 1rem;
     gap: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.valentin__mainImage {
+    grid-column: 1 / 4;
+    background-color: var(--dark);
+    padding: 1rem;
+    border-radius: 2%;
+}
+
+.nochebuena {
+    background-color: var(--white);
+    padding: 1rem;
     margin-top: 1rem;
     border-radius: 1rem;
 }
@@ -244,5 +258,14 @@ h3 {
     .corazones {   
         display: grid;     
         grid-template-columns: repeat(2, 2fr);
+    }
+
+    .four {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .four .valentin__title {
+        grid-column: 1 / 5;
     }
 }
