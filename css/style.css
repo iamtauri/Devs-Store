@@ -1,12 +1,5 @@
 /* Configuración global */
 :root {
-    /* --primary: #323231;
-    --darkPrimary: #050505;
-    --second: #00a9d4;
-    --darkSecond: #C3C4BE;
-    --white: #FFF;
-    --dark: #000; */
-
     --primary: #007E80;
     --darkPrimary: #004853;
     --second: #D3CE3D;
@@ -104,7 +97,6 @@ h3 {
     color: var(--dark);
 }
 
-
 /* Footer */
 .footer {
     background-color: var(--darkPrimary);
@@ -115,7 +107,7 @@ h3 {
 .footer__text {
     text-align: center;
     font-family: var(--mainFont);
-    font-size: 2.2rem;
+    font-size: 1.5rem;
 }
 
 /* Grid */
@@ -126,7 +118,7 @@ h3 {
     width: auto;
 }
 
-/* Productos */
+/* Mis Diseños */
 .product {
     background-color: var(--darkPrimary);
     padding: 1rem;
@@ -138,92 +130,41 @@ h3 {
 }
 
 .product__name {
-    font-size: 4rem;
-}
-
-.product__price {
-    font-size: 2.8rem;
-    color: var(--second);
-}
-
-.product__name, .product__price {
     font-family: var(--mainFont);
+    font-size: 3rem;
     margin: 1rem 0;
     text-align: center;
     line-height: 1.2;
 }
 
-/* Pictures */
-.picture {
-    min-height: 30rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-column: 1 / 3;
-    border-radius: 2%;
-}
-
-/* Nosotros */ 
-.aboutus {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-}
-
-.aboutus__image {
-    grid-template-rows: 1 / 2;
-    border: 1rem solid var(--darkPrimary);
-}
-
-/* Bloques */
-.blocks {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.block {
-    text-align: center;
-}
-
-.block__title {
-    margin: 0;
-}
-
-/* Product Page */
-.valentin {
-    margin-top: 1rem;
-    gap: 1rem;        
-    border-radius: 1rem;
+/* Contenedor Genérico */
+.block, .hearts {    
     background-color: var(--white);
     padding: 1rem;
+    gap: 1rem;  
+    margin-top: 2rem;          
+    border-radius: 1rem;
 }
 
-.valentin__image {
+.block__title{
+    grid-column: 1 / 4;
+}
+
+.block__image {
     background-color: var(--dark);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 2%;
     color: var(--dark);
-    height: auto;
 }
 
-.valentin__title{
-    grid-column: 1 / 4;
-}
-
-.corazones {
-    background-color: var(--white);
-    padding: 1rem;
-    gap: 1rem;
-    margin-top: 1rem;
-    border-radius: 1rem;
-}
-
-.valentin__mainImage {
+.block__main-image {
     grid-column: 1 / 4;
     background-color: var(--dark);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 2%;
 }
 
+/* Navidad */
 .nochebuena {
     background-color: var(--white);
     padding: 1rem;
@@ -231,41 +172,107 @@ h3 {
     border-radius: 1rem;
 }
 
-/* Responsive We Desing */
+/* About me */ 
+.aboutme {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+.aboutme__image {
+    grid-template-rows: 1 / 2;
+    border: 1rem solid var(--darkPrimary);
+}
+
+.icon {
+    text-align: center;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.icon__title {
+    margin: 0;
+}
+
+/* Responsive Web Desing */
 @media (min-width: 768px) {
+
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .aboutus {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-
-    .aboutus__image {
-        grid-column: 2 / 3;
-    }
-
-    .blocks {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .valentin {
+    /* Contenedores Global */
+    .block {
         display: grid;
         grid-template-columns: repeat(3, 1fr);        
     }
 
-    .corazones {   
+    /* San Valentín */
+    .hearts {   
         display: grid;     
         grid-template-columns: repeat(2, 2fr);
     }
 
-    .four {
-        display: grid;
+    /* Navidad */
+    .four-elements {
+        display: grid;                
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .four .valentin__title {
+    .four-elements .block__title {
         grid-column: 1 / 5;
+    }
+
+    /* Fechas Especiales */
+    .happy {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.5%;    
+        grid-column: 1 / 4;
+    }
+    
+    .mothers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5%;
+        grid-column: 1 / 4;
+    }
+    
+    .day {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5%;
+        grid-column: 1 / 4;
+    }
+
+    .ten-elements {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 0.5%;
+        grid-column: 1 / 4;
+    }
+    
+    .two-elements {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5%;
+        grid-column: 1 / 4;
+    }
+
+    /* About me */
+    .aboutme {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+    .aboutme__image {
+        grid-column: 2 / 3;
+    }
+
+    .icons {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
